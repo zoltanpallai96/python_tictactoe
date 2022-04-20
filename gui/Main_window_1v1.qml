@@ -15,6 +15,11 @@ Rectangle{
 
         color: "#1D84B5"
 
+        function after_moves() {
+            main_window.xscore = MainWindow.get_x_score()
+            main_window.oscore = MainWindow.get_o_score()
+            result.mytext = MainWindow.get_next_message()
+        }
 
         Rectangle{
 
@@ -196,10 +201,8 @@ Rectangle{
                     }                    
                     MouseArea{
                         onClicked:{
-                            parent.mytext = MainWindow.next_move(0,0)                            
-                            main_window.xscore = MainWindow.get_x_score()
-                            main_window.oscore = MainWindow.get_o_score()
-                            result.mytext = MainWindow.get_next_message()
+                            parent.mytext = MainWindow.next_move(0,0)
+                            after_moves()
 
 
                         }
@@ -220,9 +223,7 @@ Rectangle{
                     MouseArea{
                         onPressed: {
                             parent.mytext= MainWindow.next_move(0,1)
-                            main_window.xscore = MainWindow.get_x_score()
-                            main_window.oscore = MainWindow.get_o_score()
-                            result.mytext = MainWindow.get_next_message()
+                            after_moves()
                         }
 
                         anchors.fill: parent
@@ -252,9 +253,7 @@ Rectangle{
                     MouseArea{
                         onPressed: {
                             parent.mytext= MainWindow.next_move(0,2)
-                            main_window.xscore = MainWindow.get_x_score()
-                            main_window.oscore = MainWindow.get_o_score()
-                            result.mytext = MainWindow.get_next_message()
+                            after_moves()
                         }
 
                         anchors.fill: parent
@@ -283,9 +282,7 @@ Rectangle{
                    MouseArea{
                        onPressed: {
                            parent.mytext= MainWindow.next_move(1,0)
-                           main_window.xscore = MainWindow.get_x_score()
-                           main_window.oscore = MainWindow.get_o_score()
-                           result.mytext = MainWindow.get_next_message()
+                           after_moves()
                        }
 
                        anchors.fill: parent
@@ -316,9 +313,7 @@ Rectangle{
                     MouseArea{
                         onPressed: {
                             parent.mytext= MainWindow.next_move(1,1)
-                            main_window.xscore = MainWindow.get_x_score()
-                            main_window.oscore = MainWindow.get_o_score()
-                            result.mytext = MainWindow.get_next_message()
+                            after_moves()
                         }
 
                         anchors.fill: parent
@@ -348,9 +343,7 @@ Rectangle{
                     MouseArea{
                         onPressed: {
                             parent.mytext= MainWindow.next_move(1,2)
-                            main_window.xscore = MainWindow.get_x_score()
-                            main_window.oscore = MainWindow.get_o_score()
-                            result.mytext = MainWindow.get_next_message()
+                            after_moves()
                         }
 
                         anchors.fill: parent
@@ -380,9 +373,7 @@ Rectangle{
                     MouseArea{
                         onPressed: {
                             parent.mytext= MainWindow.next_move(2,0)
-                            main_window.xscore = MainWindow.get_x_score()
-                            main_window.oscore = MainWindow.get_o_score()
-                            result.mytext = MainWindow.get_next_message()
+                            after_moves()
                         }
 
                         anchors.fill: parent
@@ -411,9 +402,7 @@ Rectangle{
                     MouseArea{
                         onPressed: {
                             parent.mytext= MainWindow.next_move(2,1)
-                            main_window.xscore = MainWindow.get_x_score()
-                            main_window.oscore = MainWindow.get_o_score()
-                            result.mytext = MainWindow.get_next_message()
+                            after_moves()
                         }
 
                         anchors.fill: parent
@@ -443,9 +432,7 @@ Rectangle{
                     MouseArea{
                         onPressed: {
                             parent.mytext= MainWindow.next_move(2,2)
-                            main_window.xscore = MainWindow.get_x_score()
-                            main_window.oscore = MainWindow.get_o_score()
-                            result.mytext = MainWindow.get_next_message()
+                            after_moves()
                         }
 
                         anchors.fill: parent

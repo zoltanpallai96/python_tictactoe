@@ -213,7 +213,7 @@ class GridWithAI(Grid):
         return False
 
     def _o_move_against_corner(self):
-        if self._grid[0][1] != "X" and self._grid[1][2] != "X" and self._grid[1][0] != "X" and self._grid[2][1] != "X":
+        if self._grid[0][1] != "X" and self._grid[1][2] != "X" and self._grid[1][0] != "X" and self._grid[2][1] != "X" and self._grid[1][1] != "X":
             return True
 
         return False
@@ -239,6 +239,11 @@ class GridWithAI(Grid):
                     return 0, 0
                 if self._grid[2][1] == "X" and self._grid[1][2] == "X":
                     return 2, 2
+                if self._grid[2][0] == "X" and self._grid[1][2] == "X":
+                    return 2, 2
+                if self._grid[2][2] == "X" and self._grid[1][1] == "X":
+                    return 0, 2
+
         return None, None
 
     def restart(self):
